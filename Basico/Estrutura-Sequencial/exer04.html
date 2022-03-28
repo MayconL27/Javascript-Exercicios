@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite primeira nota</p>
+    <input type="number" nome="nota1" id="nota1">
+    <p>Digite segunda nota</p>
+    <input type="number" nome="nota2" id="nota2">
+    <p>Digite terceira nota</p>
+    <input type="number" nome="nota3" id="nota3">
+    <p>Digite quarta nota</p>
+    <input type="number" nome="nota4" id="nota4">
+
+    <input type="button" value="Calcular Média" onclick="calcular()">
+
+    <p>resultado:</p>
+    <p id="media"></p>
+    <script src="exer04.js">
+        // Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+        function calcular(){
+
+        var n1 = document.querySelector('input#nota1').value
+        var n2 = document.querySelector('input#nota2').value
+        var n3 = document.querySelector('input#nota3').value
+        var n4 = document.querySelector('input#nota4').value
+
+        var media = (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4
+
+        document.getElementById('media').innerHTML = media
+        alert(media)
+
+        }
+
+    </script>
+</body>
+</html>

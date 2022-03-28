@@ -11,9 +11,20 @@
     <input type="number" name="n1" id="n1">
     <p>Digite o segundo número:</p>
     <input type="number" name="n2" id="n2">
-    <script src="exer03.js"></script>
     <input type="button" value="Calcular" onclick="calcular()">
     <p>Resultado:</p>
     <p id="soma"></p>
+    <script>
+        // 3. Faça um Programa que peça dois números e imprima a soma.
+        function calcular() {
+            var capN1 = document.querySelector('input#n1').value
+            var capN2 = document.querySelector('input#n2').value
+
+            var soma = Number(capN1)+ Number(capN2)
+
+         document.getElementById('soma').innerHTML = soma
+        }
+
+    </script>
 </body>
 </html>
