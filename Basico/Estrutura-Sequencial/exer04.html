@@ -6,34 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Digite primeira nota</p>
-    <input type="number" nome="nota1" id="nota1">
-    <p>Digite segunda nota</p>
-    <input type="number" nome="nota2" id="nota2">
-    <p>Digite terceira nota</p>
-    <input type="number" nome="nota3" id="nota3">
-    <p>Digite quarta nota</p>
-    <input type="number" nome="nota4" id="nota4">
-
-    <input type="button" value="Calcular Média" onclick="calcular()">
-
-    <p>resultado:</p>
-    <p id="media"></p>
-    <script src="exer04.js">
-        // Faça um Programa que peça as 4 notas bimestrais e mostre a média.
-        function calcular(){
-
-        var n1 = document.querySelector('input#nota1').value
-        var n2 = document.querySelector('input#nota2').value
-        var n3 = document.querySelector('input#nota3').value
-        var n4 = document.querySelector('input#nota4').value
-
-        var media = (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4
-
-        document.getElementById('media').innerHTML = media
-        alert(media)
-
+    <p>Digite a primeiro nota:</p>
+    <input type="number" name="n1" id="n1">
+    <p>Digite a segunda nota:</p>
+    <input type="number" name="n2" id="n2">
+    <p>Digite a terceira nota:</p>
+    <input type="number" name="n3" id="n3">
+    <p>Digite a quarta nota:</p>
+    <input type="number" name="n4" id="n4">
+    
+    <input type="button" value="Calcular" onclick="calcular()">
+    <p>Média das notas:</p>
+    <p id="soma"></p>
+    <script>
+        // 3. Faça um Programa que peça dois números e imprima a soma.
+        function calcular() {
+            var n1 = document.querySelector('input#n1').value
+            var n2 = document.querySelector('input#n2').value
+            var n3 = document.querySelector('input#n3').value
+            var n4 = document.querySelector('input#n4').value
+            var soma = (Number(n1)+ Number(n2) + Number(n3)+ Number(n4)) / 4
+         document.getElementById('soma').innerHTML = soma
         }
 
     </script>
