@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer08</title>
+    <style>
+        body {
+    background: rgb(56, 102, 102);
+    font: normal 15pt Arial;
+
+}
+header {
+    color: white;
+    text-align: center;
+}
+section {
+    background: white;
+    border-radius: 18px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculo salário</h1>
+    </header>
+        <section>
+            <div> 
+              <p>Valor ganho por hora: <input type="number" name="ganhoHora" id="ganhoHora"></p> 
+              <p>Horas trabalhadas: <input type="number" name="horaTrab" id="horaTrab"></p> 
+              <input type="button" id="btnCalc" value="Calcular" onclick="calcular()">
+            </div>
+            <div id="resultado">
+                
+            </div>
+        </section>
+    <script> 
+    /* 8. Faça um Programa que pergunte quanto você ganha por hora
+        e o número de horas trabalhadas no mês. Calcule e mostre o total
+        do seu salário no referido mês.*/
+        
+        function calcular() {
+            var ganhoHora = document.querySelector('input#ganhoHora').value
+            var horaTrab = document.querySelector('input#horaTrab').value
+            var resultado = Number(ganhoHora) * Number(horaTrab)
+            alert(`Salário do mês = R$ ${resultado}`)
+            this.resultado.innerHTML = `Salário do mês = R$ ${resultado}`
+        }
+    </script>
+</body>
+</html>

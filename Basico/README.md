@@ -9,8 +9,7 @@ https://wiki.python.org.br/ListaDeExercicios
 5. Faça um Programa que converta metros para centímetros.
 6. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
 7. Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
-8. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total
-do seu salário no referido mês.
+8. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
 9. Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
 C = (5 * (F-32) / 9).
 10. Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
