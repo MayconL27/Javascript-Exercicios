@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Exer 09</title>
+</head>
+<body>
+    <header>
+        <h1>Calcular graus Farenheit para graus Celsius</h1>
+    </header>
+        <section>
+            <div> 
+              <p>temperatura graus Farenheit: <input type="number" name="grausF" id="grausF"></p> 
+              <input type="button" id="btnCalc" value="Calcular" onclick="calcular()" >
+            </div>
+            <div id="resultado">
+            </div>
+        </section>
+    <script>
+        /* 9. Faça um Programa que peça a temperatura em graus Farenheit, transforme
+         e mostre a temperatura em graus Celsius. */
+
+         function calcular() {
+            var grausF = document.querySelector('#grausF').value
+            var resultado = (5 * (Number(grausF) - 32) / 9) //C = (5 * (F-32) / 9).
+            document.querySelector('#resultado').style.color = "red";
+            alert(`Temperatura em graus Celsius ${resultado} °C`)
+            this.resultado.innerHTML = `Temperatura em graus Celsius ${resultado} °C`
+            
+         }
+    </script>
+</body>
+</html>
