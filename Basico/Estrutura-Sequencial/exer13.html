@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Peso ideal</h1></header>
+    <section>
+        <div>
+            <p>Digite sua altura: <input type="number" id="altura"></p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="mas">Feminino</label>
+            </p>
+            <input type="button" value="calcular" onclick="calcular()">
+        </div>
+        <div id="resultado">
+        </div>
+    </section>
+    <script>
+        /* 13. Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as
+                seguintes fórmulas:
+                Para homens: (72.7*h) - 58
+                Para mulheres: (62.1*h) - 44.7
+        */
+       function calcular() {
+           var altura = document.getElementById('altura').value
+           var calculoH = (72.7 * Number(altura)) - 58
+           var calculoM = (62.1 * Number(altura)) - 44.7
+
+           var sex = document.getElementsByName('radsex')
+           var gênero = ''
+           if (sex[0].checked) {
+            gênero = 'Homem'
+            document.getElementById('resultado').style.color = "blue";
+            this.resultado.innerHTML = `Peso ideal para homens: ${calculoH}`
+           } else if(sex[1].checked){
+            gênero = 'Mulher'
+            document.getElementById('resultado').style.color = "pink";
+            this.resultado.innerHTML = `Peso ideal para mulheres: ${calculoM}`
+           }     
+       }  
+    </script>
+</body>
+</html>
