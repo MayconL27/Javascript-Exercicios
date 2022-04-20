@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso de Peixes</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><h1>Peso de Peixes</h1></header>
+    <section>
+        <div>
+            <p>Digite o peso dos Peixes: <input type="number" id="pesoPeixes"></p>
+            <input type="button" value="calcular" onclick="calcular()">
+        </div>
+        <div id="resultado">
+        </div>
+    </section>
+    <script>
+        /* 14. João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda
+            vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos)
+            deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso
+            de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da
+            multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
+         */
+        function calcular() {
+            var pesoPeixes = document.getElementById('pesoPeixes').value
+            var muta = (Number(pesoPeixes) - 50) *4
+            if (pesoPeixes > 50) {
+                document.getElementById('resultado').style.color = "red";
+                this.resultado.innerHTML = `Peso ultrapassado valor a ser pago com multa é: R$ ${muta}`
+            } else {
+                document.getElementById('resultado').style.color = "blue";
+                this.resultado.innerHTML = `Peso não ultrapassado sem pagamentos de multa.`
+            }
+        }   
+    </script>
+    
+</body>
+</html>
