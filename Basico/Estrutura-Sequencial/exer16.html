@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Loja de Tintas</title>
+</head>
+<body>
+    <header><h1>Loja de Tintas</h1></header>
+    <section>
+        <div>
+            <p>Digite a área a ser pintada: <input type="number" id="metros" placeholder="Digite o valor..."></p>
+            <p>Digite o Valor da lata: <br> <input type="number" id="lataValor" placeholder="Digite o valor..."></p>
+            <p>Digite a capacidade da lata em litros: <input type="number" id="lataCapacidade" placeholder="Digite o valor..."></p>
+            <input type="button" value="calcular" onclick="calcular()">
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <script>
+        /* 16. Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
+            Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que
+            custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+        */
+       function calcular() {
+           var metros = document.querySelector('#metros').value
+           var lataValor = document.querySelector('#lataValor').value
+           var lataCapacidade = document.querySelector('#lataCapacidade').value
+           var litro = Number(metros) / 3
+        
+           var latas = (litro / Number(lataCapacidade)).toFixed(2) // Arredondar para duas casas decimais.
+           var preco = (latas * Number(lataValor)).toFixed(2) // Arredondar para duas casas decimais.
+          
+           resultado.innerHTML = `Tintas a serem usadas: ${latas} Latas <br>`
+           resultado.innerHTML += `Valor  ser gasto: R$ ${preco}`
+            
+       }
+    </script>
+</body>
+</html>
