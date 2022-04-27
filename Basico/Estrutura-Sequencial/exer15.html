@@ -39,10 +39,15 @@
            var horaGanho = document.querySelector('#horaGanho').value
            var horaTrabalho = document.querySelector('#horaTrabalho').value
            var salBruto = Number(horaGanho) * Number(horaTrabalho)
-           var impostoRenda = (horaGanho / 100) *11
+           var IR = (salBruto / 100) * 11
+           var INSS = (salBruto / 100)* 8
+           var sindicato = (salBruto / 100) * 5
+           var descontos = IR + INSS + sindicato
+           var salarioLiqui = salBruto - descontos
 
-           resultado.innerHTML = `Salário bruto : R$ ${salBruto}`
-           resultado.innerHTML += `Imposto de renda ${impostoRenda}`    
+           resultado.innerHTML = `Salário bruto: R$ ${salBruto} <br>`
+           resultado.innerHTML += `IR: R$ ${IR} <br> INSS: R$ ${INSS} <br> Sindicato: R$ ${sindicato} `
+           resultado.innerHTML += `<br> Salário liquido: R$ ${salarioLiqui}`
        }
 
     </script>
