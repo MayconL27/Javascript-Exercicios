@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Exercicio 18</title>
+</head>
+<body>
+    <header><h1>Tempo de Download</h1></header>
+    <section>
+        <div>
+            <p>Digite o tamanho do arquivo: <input type="number" id="arquivo" placeholder="Digite o valor..."></p>
+            <p>Digite a velocidade de Internet: <input type="number" id="velocidade" placeholder="Digite o valor..."></p>
+            <input type="button" value="calcular" onclick="calcular()">
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <script>
+        /* 18. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de 
+        um link de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando
+        este link (em minutos).
+        */
+        function calcular() {
+            var arquivo = document.querySelector('#arquivo').value
+            var velocidade = document.querySelector('#velocidade').value
+            var tempo = Number(arquivo) / Number(velocidade)
+            resultado.innerHTML = `Tempo de Download : ${tempo}` 
+        }
+    </script>    
+</body>
+</html>
